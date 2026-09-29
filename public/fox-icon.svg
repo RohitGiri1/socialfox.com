@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" fill="#0A0A0A"/>
+  <circle cx="512" cy="512" r="420" fill="none" stroke="#00F5FF" stroke-width="12" opacity="0.8"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="280,160 400,360 180,480" fill="rgba(0,255,65,0.15)" stroke="#00FF41" stroke-width="4"/>
+    <polygon points="280,160 512,280 400,360" fill="rgba(0,245,255,0.15)" stroke="#00F5FF" stroke-width="4"/>
+    <polygon points="744,160 624,360 844,480" fill="rgba(0,255,65,0.15)" stroke="#00FF41" stroke-width="4"/>
+    <polygon points="744,160 512,280 624,360" fill="rgba(0,245,255,0.15)" stroke="#00F5FF" stroke-width="4"/>
+    <polygon points="512,280 400,360 512,420" fill="rgba(0,255,65,0.2)" stroke="#00FF41" stroke-width="4"/>
+    <polygon points="512,280 624,360 512,420" fill="rgba(0,245,255,0.2)" stroke="#00F5FF" stroke-width="4"/>
+    <polygon points="400,360 180,480 320,680 512,420" fill="rgba(0,255,65,0.15)" stroke="#00FF41" stroke-width="4"/>
+    <polygon points="624,360 844,480 704,680 512,420" fill="rgba(0,245,255,0.15)" stroke="#00F5FF" stroke-width="4"/>
+    <polygon points="512,420 320,680 512,640" fill="rgba(0,255,65,0.25)" stroke="#00FF41" stroke-width="4"/>
+    <polygon points="512,420 704,680 512,640" fill="rgba(0,245,255,0.25)" stroke="#00F5FF" stroke-width="4"/>
+    <polygon points="512,640 320,680 512,860" fill="rgba(0,255,65,0.3)" stroke="#00FF41" stroke-width="4"/>
+    <polygon points="512,640 704,680 512,860" fill="rgba(0,245,255,0.3)" stroke="#00F5FF" stroke-width="4"/>
+    <polygon points="340,500 440,530 370,550" fill="#00F5FF"/>
+    <polygon points="684,500 584,530 654,550" fill="#00F5FF"/>
+  </g>
+</svg>

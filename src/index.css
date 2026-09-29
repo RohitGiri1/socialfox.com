@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-black: #0a0a0a;
+    --bg-surface: #121212;
+    --bg-card: #161616;
+    --border-subtle: #222222;
+    --border-active: #00ff41;
+
+    --neon-green: #00ff41;
+    --neon-cyan: #00f5ff;
+    --neon-yellow: #ffcc00;
+    --neon-red: #ff003c;
+
+    --text-main: #f0f0f0;
+    --text-muted: #888888;
+    --text-dim: #555555;
+  }
+
+  body {
+    background-color: var(--bg-black);
+    color: var(--text-main);
+    font-family: 'Noto Sans', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff41;
+}
+
+/* Clean Cyber Grid Background */
+.cyber-bg {
+  background-color: #0a0a0a;
+  background-image: radial-gradient(circle at 50% 0%, rgba(0, 255, 65, 0.08) 0%, transparent 65%),
+                    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px, 28px 28px;
+}
+
+.cyber-bg-cyan {
+  background-color: #0a0a0a;
+  background-image: radial-gradient(circle at 50% 0%, rgba(0, 245, 255, 0.08) 0%, transparent 65%),
+                    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px, 28px 28px;
+}
+
+/* Glow Effects */
+.glow-text-green {
+  color: #00ff41;
+  text-shadow: 0 0 16px rgba(0, 255, 65, 0.45);
+}
+
+.glow-text-cyan {
+  color: #00f5ff;
+  text-shadow: 0 0 16px rgba(0, 245, 255, 0.45);
+}
+
+.glow-text-yellow {
+  color: #ffcc00;
+  text-shadow: 0 0 16px rgba(255, 204, 0, 0.45);
+}
+
+/* Premium Card & Glass Styles */
+.cyber-card {
+  background: #141414;
+  border: 1px solid #222222;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 255, 65, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -5px rgba(0, 255, 65, 0.15);
+}
+
+.cyber-card-cyan:hover {
+  border-color: rgba(0, 245, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -5px rgba(0, 245, 255, 0.15);
+}
+
+/* Neon Primary Button */
+.btn-primary {
+  background: #00ff41;
+  color: #000000;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.35);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #1aff53;
+  transform: translateY(-2px);
+  box-shadow: 0 0 32px rgba(0, 255, 65, 0.65);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Neon Outline Button */
+.btn-outline {
+  background: rgba(18, 18, 18, 0.8);
+  color: #00f5ff;
+  border: 1px solid rgba(0, 245, 255, 0.5);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: rgba(0, 245, 255, 0.12);
+  border-color: #00f5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(0, 245, 255, 0.4);
+}
+
+/* Container Constraint optimized for mobile, tablet and wide desktop */
+.site-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
