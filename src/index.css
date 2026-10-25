@@ -1,16 +1,16 @@
-/* Social Fox - Clean, High-Conversion Minimal Landing Page */
+/* Social Fox - Trustworthy, High-Conversion Minimal Landing Page */
 
 :root {
-  --bg-black: #0A0A0A;
-  --bg-card: #121212;
-  --bg-surface: #171717;
-  --border-subtle: #222222;
-  --border-hover: #333333;
+  --bg-black: #0B0C0E;
+  --bg-card: #13151A;
+  --bg-surface: #181A22;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.16);
   --neon-green: #00FF41;
   --neon-cyan: #00F5FF;
-  --text-primary: #E8E8E8;
-  --text-secondary: #8A8A8A;
-  --text-muted: #666666;
+  --text-primary: #EDEDED;
+  --text-secondary: #9A9DA6;
+  --text-muted: #666974;
   
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
@@ -38,7 +38,7 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   overflow-x: hidden;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .font-mono {
@@ -66,18 +66,18 @@ body {
   }
 }
 
-.main-content {
+/* 1. Header */
+.header {
   width: 100%;
-  max-width: 440px;
+  max-width: 980px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  padding-top: 4px;
+  padding-bottom: 20px;
 }
 
-/* 1. Tiny Header */
-.header {
-  padding-top: 4px;
-  padding-bottom: 16px;
+.header-inner {
+  display: flex;
+  align-items: center;
 }
 
 .brand {
@@ -105,10 +105,34 @@ body {
   color: #FFFFFF;
 }
 
-/* 2. Headline */
+/* Main Content Container */
+.main-content {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2. Hero Section */
+.hero-section {
+  margin-bottom: 36px;
+}
+
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-text-col {
+  width: 100%;
+  max-width: 480px;
+}
+
 .headline {
   font-family: var(--font-mono);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -120,19 +144,19 @@ body {
   color: var(--neon-green);
 }
 
-/* 3. Subline */
 .subline {
   font-size: 15px;
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--text-secondary);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
-/* 4. Primary Button Section */
+/* Primary Button Section */
 .download-section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  max-width: 420px;
 }
 
 .btn-primary {
@@ -152,7 +176,7 @@ body {
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 16px rgba(0, 255, 65, 0.25);
+  box-shadow: 0 4px 18px rgba(0, 255, 65, 0.25);
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -160,7 +184,7 @@ body {
 .btn-primary:hover {
   background-color: #1aff53;
   transform: translateY(-1px);
-  box-shadow: 0 6px 22px rgba(0, 255, 65, 0.35);
+  box-shadow: 0 6px 24px rgba(0, 255, 65, 0.38);
 }
 
 .btn-primary:active {
@@ -213,13 +237,165 @@ body {
   stroke: var(--neon-green);
 }
 
-/* 5. Price Strip */
+/* Hero Phone Mockup */
+.hero-phone-col {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.hero-phone {
+  width: 230px;
+  max-width: 100%;
+}
+
+/* Phone Mockup Frame */
+.phone-frame {
+  position: relative;
+  background: #18191E;
+  border: 5px solid #23252E;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  aspect-ratio: 360 / 715;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  background: #0A0A0A;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 9px;
+  background: #000000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-camera {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #141724;
+}
+
+.phone-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3. Screenshots Section ("A look inside Social Fox") */
+.screenshots-section {
+  margin-bottom: 36px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--neon-cyan);
+  background: rgba(0, 245, 255, 0.08);
+  border: 1px solid rgba(0, 245, 255, 0.25);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.screenshots-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 4px 18px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
+}
+
+.screenshots-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.screenshots-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.screenshots-carousel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 3px;
+}
+
+.screenshots-carousel::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-green);
+}
+
+.screenshot-item {
+  flex: 0 0 210px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-phone {
+  width: 100%;
+}
+
+.carousel-phone:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px -12px rgba(0, 0, 0, 0.9), 0 0 24px -6px rgba(0, 255, 65, 0.2);
+}
+
+.screenshot-caption {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.35;
+}
+
+/* 4. Price Strip */
 .price-strip {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
-  padding: 12px 14px;
-  margin-bottom: 22px;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  max-width: 520px;
 }
 
 .price-rows {
@@ -231,7 +407,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7px 0;
+  padding: 8px 0;
   font-size: 13px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -254,13 +430,14 @@ body {
 .price-note {
   font-size: 11px;
   color: var(--text-muted);
-  margin-top: 6px;
+  margin-top: 8px;
   text-align: center;
 }
 
-/* 6. Install in 3 steps */
+/* 5. Install in 3 steps */
 .install-steps {
   margin-bottom: 28px;
+  max-width: 520px;
 }
 
 .steps-title {
@@ -309,14 +486,15 @@ body {
   flex: 1;
 }
 
-/* 7. Footer */
+/* 6. Footer */
 .footer {
   margin-top: auto;
-  padding-top: 16px;
+  padding-top: 18px;
   border-top: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
   gap: 8px;
+  max-width: 980px;
 }
 
 .footer-links {
@@ -343,7 +521,7 @@ body {
 
 .footer-disclaimer {
   font-size: 11px;
-  line-height: 1.4;
+  line-height: 1.45;
   color: var(--text-muted);
 }
 
@@ -355,7 +533,7 @@ body {
   right: 0;
   z-index: 100;
   padding: 10px 16px max(12px, env(safe-area-inset-bottom));
-  background: rgba(10, 10, 10, 0.94);
+  background: rgba(11, 12, 14, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--border-subtle);
@@ -382,13 +560,44 @@ body {
   box-shadow: 0 4px 18px rgba(0, 255, 65, 0.3);
 }
 
-/* Hide sticky bottom bar on desktop screens */
-@media (min-width: 768px) {
+/* Responsive Breakpoints: Desktop & Tablet */
+@media (min-width: 860px) {
   .sticky-bottom-bar {
     display: none !important;
   }
-  
+
+  .hero-grid {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .hero-text-col {
+    max-width: 520px;
+  }
+
   .headline {
-    font-size: 28px;
+    font-size: 32px;
+  }
+
+  .hero-phone {
+    width: 270px;
+  }
+
+  .screenshot-item {
+    flex: 0 0 176px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .screenshot-item {
+    flex: 1 1 0;
+    max-width: 182px;
+  }
+
+  .screenshots-carousel {
+    justify-content: space-between;
+    overflow-x: visible;
   }
 }
