@@ -7,16 +7,13 @@
 
 export const config = {
   // Direct download link to the APK file
-  // TODO: Replace with your actual APK download URL (e.g. GitHub Releases direct asset URL or hosted /social_fox.apk)
-  apkUrl: "/social_fox.apk",
+  apkUrl: "https://github.com/RohitGiri1/socialfox.apk/releases/download/v1.0.0/socialfox.apk",
 
   // Current production version
-  // TODO: Verify current app release version
   version: "1.0.0",
 
   // Download size of the APK
-  // TODO: Verify actual APK file size
-  size: "18 MB",
+  size: "54.2 MB",
 
   // Joining bonus incentive text.
   // Set to "" (empty string) to hide every bonus mention across the entire page automatically.
@@ -39,8 +36,8 @@ export const config = {
   // TODO: Replace with your published Privacy page URL or leave as placeholder
   privacyUrl: "/privacy",
 
-  // TODO: Verify support contact email
-  supportEmail: "support@socialfox.app",
+  // Support contact email
+  supportEmail: "support.socialfox@gmail.com",
 
   // Canonical page URL used for QR code generation and "Copy link" on desktop/iOS
   // TODO: Replace with your live custom domain
